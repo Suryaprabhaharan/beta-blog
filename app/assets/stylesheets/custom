@@ -1,0 +1,180 @@
+$navbar-default-bg: #fae596;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+body{
+	/*background-image: url("indexbgimg.jpg");*/
+	background-size: cover;
+	color:#173e43;
+}
+#logo{
+	float:left;
+	color:#000;
+	font-size:1.7em;
+	font-weight:bold;
+	text-shadow: 0 0 20px red;
+}
+
+.listing{
+	list-style-type:none;
+	padding-left:0;
+}
+
+#logo.hover{
+	color:black;
+}
+
+.center{
+	text-align:center;
+}
+
+.jumbotron{
+	/*background-color:#fae596;*/
+	background-color:#dddfd4;
+	/*background-color:linear-gradient(30deg, #ed2f18 0%, #eb613e 16%, #e58563 33%, #d9a588 50%, #c6c3ae 66%, #a7dfd5 83%, #6cfcfe 100%);background-color:linear-gradient(30deg, #ed2f18 0%, #eb613e 16%, #e58563 33%, #d9a588 50%, #c6c3ae 66%, #a7dfd5 83%, #6cfcfe 100%);*/
+	margin-bottom:30px;
+	text-align:center;
+	height:550px;
+}
+
+.article-meta-details{
+	border-top: 1px solid #777;
+	margin-top: 15px;
+}
+
+footer{
+	margin-top:45px;
+	padding-top:5px;
+	border-top:1px solid #000;
+	color:#777;
+}
+
+footer small{
+	float:left;
+}
+
+footer a.hover{
+	color:#222;
+}
+
+footer ul{
+	float:right;
+	list-style:none;
+}
+
+footer ul li{
+	float:left;
+	margin-left:15px;
+}
+
+.description{
+	margin-top:0;
+}
+
+.input_checkbox{
+	width: auto !important;
+}
+
+.badge{
+	background-color: #cef6f5;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+
+.well{
+	background-color:#dddfd4;
+}
+
+.article-footer{
+	padding:5px;
+	border-top: 1px solid #777;
+}
+
+.article-title{
+	font-size:1.5em;
+	font-weight:bold;
+}
+
+.article-body{
+	border-top:1px solid #777;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+.likebtn{
+	font-size:1.5em;
+	text-decoration: none;
+}
+
+.thumbs-success:hover{
+	filter: brightness(85%);
+	color: #5cb85c;
+	text-decoration: none;
+}
+
+.thumbs-danger:hover{
+	color: #d9534f;
+	filter: brightness(85%);
+	text-decoration: none;
+}
+
+.thumbs-success{
+	color: #5cb85c;
+}
+
+.thumbs-danger{
+	color: #d9534f;
+}
+
+.thumbs-neutral{
+	color: #777;
+}
+
+.comments-listing{
+	margin-bottom:5px;
+	margin-left: 5px;
+	padding: 1px;
+}
+
+.article-description{
+	font-size: 1.4em;
+}
+
+.comment-action{
+	font-size: 0.7em;
+	text-decoration: none;
+	line-height: 0.2;
+	color: #777;
+}
+
+.article-header{
+	padding: 5px;
+	display: flex;
+}
+
+.article-name{
+	flex-basis: 50%;
+}
+
+.article-category{
+	margin-top: 30px;
+	margin-bottom: 20px;
+	flex-basis: 50%;
+}
+
+.article-content{
+	padding: 5px;
+	margin: 3px;
+	clear: both;
+}
+
+.article-footer{
+	padding:5px;
+	border-top: 1px solid #777;
+	display: flex;
+}
+
+.article-footer div{
+	flex-basis: 50%;
+}

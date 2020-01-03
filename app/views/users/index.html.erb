@@ -1,0 +1,29 @@
+<h1 align="center">All beta-bloggers</h1>
+<div align="center">
+	<%= will_paginate @users%>
+</div>
+<div class="user-list">
+<% @users.each do |user| %>
+	<div class="users-card">
+		<div class="card-title">
+			<%=link_to user.username, user_path(user), class: "card-title-content"%>
+		</div>
+		<div class="card-body">
+			<div class="user-image">
+				<%=link_to gravatar_for(user), user_path(user)%>
+			</div>
+			<div class="user-card-data">
+				<%=pluralize(user.articles.count,"articles") if user.articles%>
+			</div>
+			<% if logged_in? and current_user.admin? %>
+				<div class="user-options">
+					<%= link_to "Delete User", user_path(user),class: "btn btn-lg btn-danger" , method: :delete, data: {confirm: "Are you sure to delete the user and all their articles?"}%>
+				</div>
+			<% end %>
+		</div>
+	</div>
+<%end%>
+</div>
+<div align="center">
+	<%= will_paginate @users%>
+</div>

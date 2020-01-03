@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Beta Blog</title>
+    <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="complete-page">
+      <div class="navigation-bar">
+        <%=render 'layouts/navigation'%>
+      </div>
+      <div class="page-contents">
+        <%=render 'layouts/messages'%>
+        <div class="container">
+          <%= yield %>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <%=render 'layouts/footer'%>
+      </div>
+      <%=debug(params) if Rails.env.development? %>
+    </div>
+  </body>
+</html>

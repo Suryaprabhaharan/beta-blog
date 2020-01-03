@@ -1,0 +1,17 @@
+<div class="likebtn">	
+	<% if logged_in? %>
+		<%= link_to add_like_path(id: @article.id), remote: true, method: :post, class: @article.likes?(current_user) ? 'thumbs-success' : 'thumbs-success thumbs-neutral' do %>
+			<i class="fa fa-thumbs-up"></i>
+			<%= @article.num_likes %>
+		<% end %>
+		<%= link_to add_dislike_path(id: @article.id), remote: true, method: :post, class: @article.dislikes?(current_user) ? 'thumbs-danger' : 'thumbs-danger thumbs-neutral' do %>
+			<i class="fa fa-thumbs-down"></i>
+			<%= @article.num_dislikes %>
+		<% end %>
+	<% else %>
+		<div class="thumbs-neutral">
+			<i class="fa fa-thumbs-up"></i><%= @article.num_likes %>
+			<i class="fa fa-thumbs-down"></i><%= @article.num_dislikes %>
+		</div>
+	<% end %>
+</div>

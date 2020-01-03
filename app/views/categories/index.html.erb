@@ -1,0 +1,31 @@
+<h1 align="center">Listing all categories</h1>
+<div align="center">
+	<%= will_paginate @category%>
+</div>
+<div class="user-list">
+<% @category.each do |category| %>
+	<div class="users-card">
+		<div class="card-title">
+				<%=link_to "#{category.name}", category_path(category), class: "card-title-content"%>
+		</div>
+		<div class="category-card-body">
+			<div class="category-article-listing">
+			<% art_count = category.articles.count %>
+			<% if art_count > 0 %>
+					<% category.articles.each do |art| %>
+						<div class="category-article-item">
+							<%= link_to "#{art.title}", article_path(art)%>, by <%="#{art.user.username}"%>	
+						</div>
+					<% end %>
+				<% end %>
+			</div>
+			<div class="user-card-data">
+				<%= pluralize(art_count,"article")%>
+			</div>
+		</div>
+	</div>
+<%end%>
+</div>
+<div align="center">
+	<%= will_paginate @category%>
+</div>

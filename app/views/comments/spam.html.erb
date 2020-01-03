@@ -1,0 +1,38 @@
+<h1 align="center">Spam comments</h1>
+<div align="center">
+	<%= will_paginate @comment%>
+</div>
+<div class="spam-comment-item">
+	<div class="spam-comment-desc">
+		<b>Comment</b>
+	</div>
+	<div class="spam-comment-user">
+		<b>Posted by</b>
+	</div>
+	<div class="spam-comment-article">
+		<b>Article</b>
+	</div>
+	<div class="spam-comment-delete">
+		<b>Actions</b>
+	</div>
+</div>
+<% @comment.each do |comment| %>
+	<div class="spam-comment-item">
+		<div class="spam-comment-desc">
+			<%=comment.description%>
+		</div>
+		<div class="spam-comment-user">
+			<%=comment.user!=nil ? comment.user.username : "Anonymous"%>
+		</div>
+		<div class="spam-comment-article">
+			<%= comment.article.title %>
+		</div>
+		<div class="spam-comment-delete">
+			<%= link_to "Delete", delete_spam_comment_path(id: comment.id), method: :delete, class: "btn btn-danger" %>
+			<%= link_to "Ignore", ignore_spam_comment_path(id: comment.id), method: :post, class: "btn btn-primary" %>
+		</div>
+	</div>
+<% end %>
+<div align="center">
+	<%= will_paginate @comment%>
+</div>

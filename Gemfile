@@ -5,9 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
 # Use Puma as the app server
 gem 'puma', '~> 3.12'
@@ -15,7 +16,7 @@ gem 'puma', '~> 3.12'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~>3.4.1'
 gem 'jquery-rails'
-gem 'will_paginate', '3.1'
+gem 'will_paginate', '3.1.7'
 gem 'font-awesome-rails'
 gem 'bootstrap-will_paginate', '0.0.10'
 # Use Uglifier as compressor for JavaScript assets
